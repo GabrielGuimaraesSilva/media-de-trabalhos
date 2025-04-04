@@ -6,32 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de médias</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
-        <h1>Calculadora de médias</h1>
-        <form id="formulario">
-            <input type="text" id="nome" placeholder="Título do trabalho">
-            <input type="number" id="nota" placeholder="Nota">
+        <header>
+            <img src="./assests/logo.png" alt="capelo e diploma">
+            <h1>Calculadora de Médias</h1>
+        </header>
+        <form id="form-atividade">
+            <input type="text" required placeholder="Nome da atividade" id="nome-atividade">
+            <input type="number" required placeholder="Nota" id="nota-atividade" min="0" max="10" step="0.1">
             <button type="submit">Adicionar +</button>
         </form>
-    </div>
-    <div class="container2">
-        <table id="tabela" cellspacing="0">
+        <table cellspacing="0">
             <thead>
                 <tr>
-                    <th>Título do trabalho</th>
-                    <th>Nota</th>
-                    <th>Status</th>
+                    <th>Nome da Atividade</th>
+                    <th>Nota da Atividade</th>
+                    <th>Aprovado?</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+                <tr>
+                </tr>
+            </tbody>
             <tfoot>
                 <tr>
-                    <td>Média final</td>
-                    <td id="media-final">---</td>
-                    <td id="media-final-resultado">---</td>
+                    <td>Média Final</td>
+                    <td></td>
+                    <td><span class="resultado aprovado"></span></td>
                 </tr>
             </tfoot>
         </table>
